@@ -1,0 +1,16 @@
+// Предполагаем, что у нас есть массив
+let items = ['item1', 'item2', 'item3', 'item4', 'item5'];
+
+// Функция для вывода длины массива
+function showArrayLength() {
+  alert('Длина массива: ' + items.length);
+}
+
+// Добавляем обработчик события 'mouseover' ко всем элементам массива
+items.forEach((item, index) => {
+  // Предполагаем, что у нас есть элементы DOM, соответствующие элементам массива
+  let domElement = document.getElementById('item' + (index + 1));
+  if (domElement) {
+    domElement.addEventListener('mouseover', showArrayLength);
+  }
+});
