@@ -1,0 +1,8 @@
+// Создаем новый объект даты для получения текущей даты
+let currentDate = new Date();
+
+// Определяем опции для метода toLocaleDateString()
+let options = { year: 'numeric', month: 'long', day: 'numeric' };
+
+// Выводим дату в заданном формате
+console.log(currentDate.toLocaleDateString('ru-RU', options));
